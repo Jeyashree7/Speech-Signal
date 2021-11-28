@@ -1,0 +1,13 @@
+clear;
+clc;
+[y,Fs,bits]=wavread("E:\speech.wav");
+a = gca();
+plot2d(y);
+a.x_location = 'origin';
+title('Speech signal information')
+disp(Fs,'Sampling Rate in Hz Fs = ');
+disp(bits,'Number of bits used per speech sample b =');
+N = length(y);
+T = N/Fs;
+disp(N,'Total Number of Samples N =')
+disp(T,'Duration of speech signal in seconds T=')
